@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [Header("TextBoxes")]
 
@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     public Text essenceFromEnemies;
 
-    public Text enemiesKilled;
+    public Text enemiesKilledText;
 
     public Text lighthouseDamageText;
 
@@ -43,7 +43,6 @@ public class UIManager : MonoBehaviour
     public Text totalEnemiesKilledText;
 
     public Text commentText;
-
 
     private List<Text> listText = new List<Text>();
 
@@ -75,39 +74,22 @@ public class UIManager : MonoBehaviour
 
     private List<Button> listButtons = new List<Button>();
 
+    //Game Management Objects
+
+    public static int roundNum = 1;
+
+    public static int essence = 0;
+
+    public int lighthouseHealth = 100;
+
+    public int lighthouseArmor = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
-        listText.Add(findSurfaceText);
-
-        
-        listButtons.Add(resetTrackingButton);
-        listButtons.Add(looksGoodButton);
-        listButtons.Add(confirmLGButton);
-        listButtons.Add(denyLGButton);
-        
+        TransitionScene("Initializing");
     }
-
-    //called by looksGoodButton
-    public void PromptForConfirmation()
-    {
-        findSurfaceText.text = "This is a good spot for the lighthouse?";
-        TransitionScene("cordeny");
-
-    }
-
-    //called by confirmLGButton
-    public void LoadLevel()
-    {
-        TransitionScene("level");
-    }
-    //called by denyLGButton
-    public void PromptForTracking()
-    {
-        TransitionScene("init");
-    }
-
 
     public void TransitionScene(string tagOfDesireScene)
     {
@@ -130,7 +112,85 @@ public class UIManager : MonoBehaviour
                 currentButton.gameObject.SetActive(false);
         }
 
-        
-        
     }
+    //========================================== Initilalizing Functions =====================================================
+
+    public void ResetTracking()
+    {
+        TrackingManager.counter = 0;
+    }
+
+    public void LooksGood()
+    {
+        findSurfaceText.text = "This is a good spot for the lighthouse?";
+        TransitionScene("cordeny");
+    }
+
+    //========================================== ConfirmOrDeny Functions =====================================================
+
+    public void ConfirmLG()
+    {
+        TransitionScene("level");
+    }
+
+    public void DenyLG()
+    {
+        TransitionScene("init");
+    }
+
+    //========================================== Report Functions =====================================================
+
+    public void NextLevel()
+    {
+        TransitionScene("level");
+    }
+
+    public void HealLighthouse()
+    {
+        if (essence > 20)
+        {
+            essence -= 20;
+            if (lighthouseHealth < 81)
+                lighthouseHealth += 20;
+
+            else
+                lighthouseHealth = 100;
+        }
+    }
+
+    public void LightHouseArmor()
+    {
+        if (essence > 20)
+        {
+            lighthouseArmor += 20;
+            essence -= 20;
+        }
+    }
+
+    public void UpgradeCombo()
+    {
+        //TODO
+    }
+
+    public void UpgradeAccuracy()
+    {
+        //TODO
+    }
+
+    //========================================== Lose Functions =====================================================
+
+    public void TryAgain()
+    {
+    roundNum = 1;
+
+    essence = 0;
+
+    lighthouseHealth = 100;
+
+    lighthouseArmor = 0;
+
+        TransitionScene("Initializing");
 }
+}
+
+

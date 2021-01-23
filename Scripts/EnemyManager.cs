@@ -13,13 +13,10 @@ public class EnemyManager : MonoBehaviour
 
     private bool levelIsRunning = false;
 
-    public static int essence;
-
     private List<GameObject> currentEnemies = new List<GameObject>();
 
-    private int comboLevel = 0;
 
-    private float secondsRemaining; 
+    private static float secondsRemaining; 
 
     private int enemyDistanceRange = 50;
 
@@ -75,11 +72,11 @@ public class EnemyManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        comboLevel++;
+        //comboLevel++;
         currentEnemies.Remove(gameObject);
         Destroy(gameObject);
 
-        essence += (comboLevel / 2);
+        //GameManager.essence += (comboLevel / 2);
 
     }
 

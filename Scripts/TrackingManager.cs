@@ -14,7 +14,7 @@ public class TrackingManager : MonoBehaviour
 
     public static Vector3 lightouseLocation;
 
-    private int counter = 0;
+    public static int counter = 0;
 
     private void Awake()
     {
@@ -40,11 +40,6 @@ public class TrackingManager : MonoBehaviour
         }
         counter++;
         
-    }
-
-    public void ResetTracking()
-    {
-        counter = 0;
     }
 }
 
