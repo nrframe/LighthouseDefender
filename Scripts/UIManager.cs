@@ -7,19 +7,71 @@ public class UIManager : MonoBehaviour
 {
     [Header("TextBoxes")]
 
+    //"Initializing"
     public Text findSurfaceText;
+
+    //"ConfirmOrDeny"
+    public Text cOrDenyText;
+
+    //"Level"
+    public Text timerText;
+
+    public Text essenceText;
+
+    //"Report"
+    public Text roundNumText;
+
+    public Text essenceFromEnemies;
+
+    public Text enemiesKilled;
+
+    public Text lighthouseDamageText;
+
+    public Text lighthouseHealthText;
+
+    public Text accuracyBonusText;
+
+    public Text untouchedBonusText;
+
+    public Text flawlessBonusText;
+
+    public Text totalEssenceGainedText;
+
+    //"Lose"
+    public Text roundEndedText;
+
+    public Text totalEnemiesKilledText;
+
+    public Text commentText;
+
 
     private List<Text> listText = new List<Text>();
 
     [Header("Buttons")]
 
+    //"Initializing"
     public Button resetTrackingButton;
 
     public Button looksGoodButton;
 
+    //"ConfirmOrDeny"
     public Button confirmLGButton;
 
     public Button denyLGButton;
+
+    //"Report"
+    public Button nextLevelButton;
+
+    public Button healLighthouseButton;
+
+    public Button lighthouseArmorButton;
+
+    public Button upgradeComboButton;
+
+    public Button upgradeAccuracyButton;
+
+    //"Lose"
+    public Button tryAgainButton;
 
     private List<Button> listButtons = new List<Button>();
 
@@ -41,10 +93,22 @@ public class UIManager : MonoBehaviour
     public void PromptForConfirmation()
     {
         findSurfaceText.text = "This is a good spot for the lighthouse?";
+        TransitionScene("cordeny");
 
     }
 
     //called by confirmLGButton
+    public void LoadLevel()
+    {
+        TransitionScene("level");
+    }
+    //called by denyLGButton
+    public void PromptForTracking()
+    {
+        TransitionScene("init");
+    }
+
+
     public void TransitionScene(string tagOfDesireScene)
     {
 
@@ -66,6 +130,7 @@ public class UIManager : MonoBehaviour
                 currentButton.gameObject.SetActive(false);
         }
 
+        
         
     }
 }

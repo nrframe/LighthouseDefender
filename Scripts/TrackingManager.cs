@@ -8,9 +8,11 @@ public class TrackingManager : MonoBehaviour
 {
     private ARTrackedImageManager myTrackedImageManager;
 
-    [SerializeField] private GameObject lighthouseObject;
+    public GameObject lighthouseObject;
 
-    private GameObject placedLighthouse;
+    public GameObject placedLighthouse;
+
+    public static Vector3 lightouseLocation;
 
     private int counter = 0;
 
@@ -33,8 +35,11 @@ public class TrackingManager : MonoBehaviour
         foreach(var trackedImage in myTrackedImageManager.trackables)
         {
             placedLighthouse = Instantiate(lighthouseObject, trackedImage.transform.position, Quaternion.identity);
+            lightouseLocation = 
+            new Vector3(trackedImage.transform.position.x, trackedImage.transform.position.y, trackedImage.transform.position.z);
         }
         counter++;
+        
     }
 
     public void ResetTracking()
