@@ -10,7 +10,7 @@ public class TrackingManager : MonoBehaviour
 
     public GameObject lighthouseObject;
 
-    public GameObject placedLighthouse;
+    private GameObject placedLighthouse;
 
     public static Vector3 lightouseLocation;
 

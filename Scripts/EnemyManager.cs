@@ -95,7 +95,6 @@ public class EnemyManager : MonoBehaviour
             {
 
                 transform.position += transform.forward * 4 * Time.deltaTime;
-
             }
         }
     }

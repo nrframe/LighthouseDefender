@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class UIManager : MonoBehaviour
 {
@@ -90,6 +91,18 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        foreach (Text go in Resources.FindObjectsOfTypeAll(typeof(Text)) as Text[])
+        {
+            if (!EditorUtility.IsPersistent(go.transform.root.gameObject) && !(go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave))
+                listText.Add(go);
+        }
+
+        foreach (Button go in Resources.FindObjectsOfTypeAll(typeof(Button)) as Button[])
+        {
+            if (!EditorUtility.IsPersistent(go.transform.root.gameObject) && !(go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave))
+                listButtons.Add(go);
+        }
+
         TransitionScene("Initializing");
     }
 
@@ -194,7 +207,7 @@ public class UIManager : MonoBehaviour
 
     lighthouseArmor = 0;
 
-        TransitionScene("Level");
+    TransitionScene("Level");
     }
 
 }
