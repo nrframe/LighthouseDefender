@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 67587028}
   m_Layer: 5
   m_Name: totalEnemiesKilledText
-  m_TagString: Untagged
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 161844025}
   m_Layer: 5
   m_Name: commentText
-  m_TagString: Untagged
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 252149672}
   m_Layer: 5
   m_Name: findSurfaceText
-  m_TagString: Untagged
+  m_TagString: Initializing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 298454949}
   m_Layer: 5
   m_Name: healLighthouseButton
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 352930271}
   m_Layer: 5
   m_Name: untouchedBonusText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 354781559}
   m_Layer: 5
   m_Name: essenceFromEnemiesText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 549458973}
   m_Layer: 5
   m_Name: resetTrackingButton
-  m_TagString: Untagged
+  m_TagString: Initializing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,11 +1315,11 @@ GameObject:
   - component: {fileID: 680341485}
   m_Layer: 5
   m_Name: nextLevelButton
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &680341484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 688938889}
   m_Layer: 5
   m_Name: upgradeAccuracyButton
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 762142651}
   m_Layer: 5
   m_Name: roundEndedText
-  m_TagString: Untagged
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1708,7 +1708,7 @@ GameObject:
   - component: {fileID: 860270401}
   m_Layer: 5
   m_Name: flawlessBonusText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 957161399}
   m_Layer: 5
   m_Name: lighthouseHealthText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1943,7 +1943,7 @@ GameObject:
   - component: {fileID: 1011848016}
   m_Layer: 5
   m_Name: looksGoodButton
-  m_TagString: Untagged
+  m_TagString: Initializing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,11 +2128,11 @@ GameObject:
   - component: {fileID: 1087985786}
   m_Layer: 5
   m_Name: Report Canvas
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1087985786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,7 +2244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1191904973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,7 +2341,7 @@ GameObject:
   - component: {fileID: 1202247420}
   m_Layer: 5
   m_Name: totalEssenceGainedText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2419,7 +2419,7 @@ GameObject:
   - component: {fileID: 1211704551}
   m_Layer: 5
   m_Name: accuracyBonusText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2575,7 +2575,7 @@ GameObject:
   - component: {fileID: 1322941103}
   m_Layer: 5
   m_Name: roundNumText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2654,7 +2654,7 @@ GameObject:
   - component: {fileID: 1330573714}
   m_Layer: 5
   m_Name: tryAgainButton
-  m_TagString: Untagged
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2773,11 +2773,11 @@ GameObject:
   - component: {fileID: 1374167300}
   m_Layer: 5
   m_Name: Confirm Or Deny Canvas
-  m_TagString: Untagged
+  m_TagString: ConfirmOrDeny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1374167300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,7 +2874,7 @@ GameObject:
   - component: {fileID: 1394249204}
   m_Layer: 5
   m_Name: confirmLGButton
-  m_TagString: Untagged
+  m_TagString: ConfirmOrDeny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3071,7 +3071,7 @@ GameObject:
   - component: {fileID: 1485293650}
   m_Layer: 5
   m_Name: upgradeComboButton
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3190,7 +3190,7 @@ GameObject:
   - component: {fileID: 1595061378}
   m_Layer: 5
   m_Name: lighthouseArmorButton
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3387,7 +3387,7 @@ GameObject:
   - component: {fileID: 1647676142}
   m_Layer: 5
   m_Name: denyLGButton
-  m_TagString: Untagged
+  m_TagString: ConfirmOrDeny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3583,7 +3583,7 @@ GameObject:
   - component: {fileID: 1822543148}
   m_Layer: 5
   m_Name: enemiesKilledText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3781,7 +3781,7 @@ GameObject:
   - component: {fileID: 1866173892}
   m_Layer: 5
   m_Name: cOrDenyText
-  m_TagString: Untagged
+  m_TagString: ConfirmOrDeny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3859,7 +3859,7 @@ GameObject:
   - component: {fileID: 1953792930}
   m_Layer: 5
   m_Name: lighthouseDamageText
-  m_TagString: Untagged
+  m_TagString: Report
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3939,11 +3939,11 @@ GameObject:
   - component: {fileID: 1958081882}
   m_Layer: 5
   m_Name: 'Initializing Canvas '
-  m_TagString: Untagged
+  m_TagString: Initializing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1958081878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,7 +4044,7 @@ MonoBehaviour:
   essenceText: {fileID: 0}
   roundNumText: {fileID: 0}
   essenceFromEnemies: {fileID: 0}
-  enemiesKilled: {fileID: 0}
+  enemiesKilledText: {fileID: 0}
   lighthouseDamageText: {fileID: 0}
   lighthouseHealthText: {fileID: 0}
   accuracyBonusText: {fileID: 0}
@@ -4054,6 +4054,7 @@ MonoBehaviour:
   roundEndedText: {fileID: 0}
   totalEnemiesKilledText: {fileID: 0}
   commentText: {fileID: 0}
+  listText: []
   resetTrackingButton: {fileID: 549458973}
   looksGoodButton: {fileID: 1011848016}
   confirmLGButton: {fileID: 0}
@@ -4064,3 +4065,6 @@ MonoBehaviour:
   upgradeComboButton: {fileID: 0}
   upgradeAccuracyButton: {fileID: 0}
   tryAgainButton: {fileID: 0}
+  listButtons: []
+  lighthouseHealth: 100
+  lighthouseArmor: 0

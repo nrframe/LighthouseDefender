@@ -14,6 +14,7 @@ public class TrackingManager : MonoBehaviour
 
     public static Vector3 lightouseLocation;
 
+
     public static int counter = 0;
 
     private void Awake()
@@ -24,14 +25,24 @@ public class TrackingManager : MonoBehaviour
     private void Update()
     {
 
-            if (myTrackedImageManager.trackables.count == 1 && counter == 0)
+         if (myTrackedImageManager.trackables.count == 1 && counter == 0)
+         {
+              PlaceLighthouse();
+         }
+
+        foreach (var trackedImage in myTrackedImageManager.trackables)
+        {
+            if(!trackedImage.trackingState.Equals("Tracking"))
             {
-            PlaceLighthouse();
+                UIManager.pauseGame = true;
+                counter = 0;
             }
+        }
     }
 
     public void PlaceLighthouse()
     {
+        UIManager.pauseGame = true;
         foreach(var trackedImage in myTrackedImageManager.trackables)
         {
             placedLighthouse = Instantiate(lighthouseObject, trackedImage.transform.position, Quaternion.identity);

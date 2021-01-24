@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [Header("TextBoxes")]
 
@@ -83,6 +83,8 @@ public class GameManager : MonoBehaviour
     public int lighthouseHealth = 100;
 
     public int lighthouseArmor = 0;
+
+    public static bool pauseGame = false;
 
 
     // Start is called before the first frame update
@@ -174,9 +176,12 @@ public class GameManager : MonoBehaviour
 
     public void UpgradeAccuracy()
     {
-        //TODO
+        foreach(GameObject enemy in EnemyManager.currentEnemies)
+        {
+            
+        }
     }
-
+     
     //========================================== Lose Functions =====================================================
 
     public void TryAgain()
@@ -189,8 +194,9 @@ public class GameManager : MonoBehaviour
 
     lighthouseArmor = 0;
 
-        TransitionScene("Initializing");
-}
+        TransitionScene("Level");
+    }
+
 }
 
 

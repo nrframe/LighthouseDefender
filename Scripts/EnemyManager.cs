@@ -7,14 +7,13 @@ public class EnemyManager : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject EnemyObject;
+    public GameObject enemyObject;
 
     private float time;
 
     private bool levelIsRunning = false;
 
-    private List<GameObject> currentEnemies = new List<GameObject>();
-
+    public static List<GameObject> currentEnemies = new List<GameObject>();
 
     private static float secondsRemaining; 
 
@@ -23,15 +22,21 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(time > 0)
-            time -= Time.deltaTime;
+        if (!UIManager.pauseGame)
+        {
+            if (time > 0)
+                time -= Time.deltaTime;
+
+            else
+                levelIsRunning = false;
+
+            secondsRemaining = Mathf.FloorToInt(time % 60);
+
+            MoveEnemiesCloser();
+        }
 
         else
             levelIsRunning = false;
-
-        secondsRemaining = Mathf.FloorToInt(time % 60);
-
-        MoveEnemiesCloser();
     }
 
     public void SpawnEnemies(int level)
@@ -65,7 +70,7 @@ public class EnemyManager : MonoBehaviour
 
             StartCoroutine(Wait(seconds));
 
-            currentEnemies.Add(Instantiate(EnemyObject, location, Quaternion.identity));
+            currentEnemies.Add(Instantiate(enemyObject, location, Quaternion.identity));
 
         }
     }
