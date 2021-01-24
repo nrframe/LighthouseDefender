@@ -8,6 +8,8 @@ public class TrackingManager : MonoBehaviour
 {
     private ARTrackedImageManager myTrackedImageManager;
 
+    public GameObject ARSessionOrigin;
+
     public GameObject lighthouseObject;
 
     private GameObject placedLighthouse;
@@ -17,9 +19,9 @@ public class TrackingManager : MonoBehaviour
 
     public static int counter = 0;
 
-    private void Awake()
+    void Start()
     {
-         myTrackedImageManager = GetComponent<ARTrackedImageManager>();
+        myTrackedImageManager = GameObject.FindWithTag("tag").GetComponent<ARTrackedImageManager>();
     }
 
     private void Update()
@@ -31,7 +33,7 @@ public class TrackingManager : MonoBehaviour
          }
 
         foreach (var trackedImage in myTrackedImageManager.trackables)
-        {
+        { 
             if(!trackedImage.trackingState.Equals("Tracking"))
             {
                 UIManager.pauseGame = true;

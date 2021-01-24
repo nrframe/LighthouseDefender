@@ -28,8 +28,10 @@ public class EnemyManager : MonoBehaviour
                 time -= Time.deltaTime;
 
             else
+            {
                 levelIsRunning = false;
-
+                UIManager.pauseGame = true;
+            }
             secondsRemaining = Mathf.FloorToInt(time % 60);
 
             MoveEnemiesCloser();
@@ -66,6 +68,7 @@ public class EnemyManager : MonoBehaviour
             randomZ = Random.Range(enemyDistanceRange, enemyDistanceRange += enemyDistanceRange / 2);
             if (randomZ % 2 == 0)
                 randomZ = -randomZ;
+                randomZ = -randomZ;
             location = new Vector3(randomX, randomY, randomZ);
 
             StartCoroutine(Wait(seconds));
@@ -95,6 +98,7 @@ public class EnemyManager : MonoBehaviour
             {
 
                 transform.position += transform.forward * 4 * Time.deltaTime;
+
             }
         }
     }

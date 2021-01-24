@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     public Text essenceText;
 
     //"Report"
+    public Text reportEssenceText;
+
     public Text roundNumText;
 
     public Text essenceFromEnemies;
@@ -80,7 +82,7 @@ public class UIManager : MonoBehaviour
 
     //Game Management Objects
 
-    public static int roundNum = 1;
+    public static int roundNum = 0;
 
     public static int essence = 0;
 
@@ -88,7 +90,7 @@ public class UIManager : MonoBehaviour
 
     public int lighthouseArmor = 0;
 
-    public static bool pauseGame = false;
+    public static bool pauseGame = true;
 
 
     // Start is called before the first frame update
@@ -106,7 +108,16 @@ public class UIManager : MonoBehaviour
                 listButtons.Add(go);
         }
 
-        TransitionScene("Initializing");
+    //"Initializing"
+    findSurfaceText.text = "Point the camera at the image Target";
+
+    //"ConfirmOrDeny"
+    cOrDenyText.text = "Is this where you want the lighthouse?";
+
+    //"Lose"
+     commentText.text = "Don't give up! Try again";
+
+    TransitionScene("Initializing");
     }
 
     public void TransitionScene(string tagOfDesireScene)
@@ -140,27 +151,31 @@ public class UIManager : MonoBehaviour
 
     public void LooksGood()
     {
-        findSurfaceText.text = "This is a good spot for the lighthouse?";
-        TransitionScene("cordeny");
+        TransitionScene("ConfirmOrDeny");
     }
 
     //========================================== ConfirmOrDeny Functions =====================================================
 
     public void ConfirmLG()
     {
-        TransitionScene("level");
+
+        TransitionScene("Level");
+        roundNum++;
+        pauseGame = false;
     }
 
     public void DenyLG()
     {
-        TransitionScene("init");
+        TransitionScene("Initializing");
     }
 
     //========================================== Report Functions =====================================================
 
     public void NextLevel()
     {
-        TransitionScene("level");
+        TransitionScene("Level");
+        roundNum++;
+        pauseGame = false;
     }
 
     public void HealLighthouse()
@@ -174,6 +189,7 @@ public class UIManager : MonoBehaviour
             else
                 lighthouseHealth = 100;
         }
+        reportEssenceText.text = (essence.ToString()) ;
     }
 
     public void LightHouseArmor()
@@ -183,26 +199,36 @@ public class UIManager : MonoBehaviour
             lighthouseArmor += 20;
             essence -= 20;
         }
+        reportEssenceText.text = (essence.ToString());
     }
 
     public void UpgradeCombo()
     {
-        //TODO
+        //TODO figure out how to tell if they miss ghost
     }
 
     public void UpgradeAccuracy()
     {
-        foreach(GameObject enemy in EnemyManager.currentEnemies)
+        if (essence > 20)
         {
-            
+            essence -= 20;
+
+            foreach (GameObject enemy in EnemyManager.currentEnemies)
+            {
+
+            }
+
+            reportEssenceText.text = (essence.ToString());
         }
+        
+
     }
      
     //========================================== Lose Functions =====================================================
 
     public void TryAgain()
     {
-    roundNum = 1;
+    roundNum = 0;
 
     essence = 0;
 
