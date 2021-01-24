@@ -59,6 +59,9 @@ public class UIManager : MonoBehaviour
 
     public Button denyLGButton;
 
+    //"Level"
+
+
     //"Report"
     public Button nextLevelButton;
 

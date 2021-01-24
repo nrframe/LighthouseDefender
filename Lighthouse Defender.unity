@@ -665,7 +665,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 298454950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: HealLighthouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &298454950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,7 +1208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 664952676}
+      - m_Target: {fileID: 1077297186}
         m_MethodName: ResetTracking
         m_Mode: 1
         m_Arguments:
@@ -1559,7 +1570,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680341486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &680341486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,7 +1700,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 688938890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: UpgradeAccuracy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &688938890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2187,7 +2220,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1011848017}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: LooksGood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1011848017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2969,7 +3013,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1330573715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: TryAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1330573715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,7 +3244,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1394249205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: ConfirmLG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394249205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,7 +3452,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1485293651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: UpgradeCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1485293651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3582,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1595061379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: LightHouseArmor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1595061379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3702,7 +3790,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1647676143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077297186}
+        m_MethodName: DenyLG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1647676143
 MonoBehaviour:
   m_ObjectHideFlags: 0
